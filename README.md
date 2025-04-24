@@ -1,78 +1,12 @@
-# Crypto-price-tracker
-A responsive crypto price tracker built with React, Redux Toolkit, and Tailwind CSS. It displays real-time prices, percent changes, market data, and static 7D charts for top cryptocurrencies using CoinGecko API and simulated updates.
-# Crypto Price Tracker
+# React + Vite
 
-A responsive web app to display live cryptocurrency prices with real-time updates, built using React, Vite, Redux Toolkit, and Tailwind CSS.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## 🚀 Features
+Currently, two official plugins are available:
 
-- **Live Cryptocurrency Data**: Displays sample data for 5 major crypto assets like Bitcoin (BTC), Ethereum (ETH), Tether (USDT), etc.
-- **Real-time Updates**: Simulates WebSocket behavior using `setInterval` or a mock WebSocket class to update data every 1-2 seconds.
-- **Responsive UI**: Fully responsive table layout showing:
-  - Logo
-  - Name
-  - Symbol
-  - Current Price
-  - 1h, 24h, 7d % Changes (color-coded)
-  - Market Cap
-  - 24h Trading Volume
-  - Circulating Supply
-  - Max Supply
-  - Static 7D Chart (SVG/Image)
-- **Color-coded Percentages**: Green for positive change, Red for negative.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## 🛠 Tech Stack
+## Expanding the ESLint configuration
 
-- **Frontend**: React + Vite
-- **State Management**: Redux Toolkit
-- **Styling**: Tailwind CSS
-- **API Source**: CoinGecko (planned integration)
-
-## 📁 Folder Structure
-
-```
-crypto-price-tracker/
-├── node_modules/
-├── public/
-├── src/
-│   ├── assets/            # Static images, logos, sample charts
-│   ├── components/        # Reusable React components (e.g., CryptoTable.jsx)
-│   ├── redux/             # Redux slices & store
-│   ├── App.jsx            # Main app component
-│   ├── index.css          # Tailwind imports
-│   └── main.jsx           # Entry point
-├── postcss.config.js
-├── tailwind.config.js
-├── package.json
-└── README.md
-```
-
-## 🧪 Sample Data Simulation
-
-Data is generated using sample objects and randomized at 1-2s intervals to simulate real-time price movements and percent changes.
-
-## 📦 Installation & Setup
-
-```bash
-# Clone the repository
-git clone https://github.com/your-username/crypto-price-tracker.git
-cd crypto-price-tracker
-
-# Install dependencies
-npm install
-
-# Start the development server
-npm run dev
-```
-
-## 🌐 Future Enhancements
-
-- Integrate real CoinGecko API for live prices
-- Add interactive chart with libraries like Chart.js or Recharts
-- Improve accessibility and mobile responsiveness
-- Add dark mode toggle
-
----
-
-Made with ❤️ by [Your Name] / [Your GitHub Username]
-
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
