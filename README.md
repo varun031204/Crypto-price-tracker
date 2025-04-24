@@ -72,5 +72,5 @@ npm run dev
 
 ---
 
-Made with ❤️ by [Your Name] / [Your GitHub Username]
+Made by Varun / Varun031204
 
