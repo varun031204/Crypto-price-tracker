@@ -91,7 +91,7 @@ const CryptoTable = () => {
                   {formatSupply(asset.circulatingSupply)} {asset.maxSupply && `/ ${formatSupply(asset.maxSupply)}`}
                 </td>
                 <td className="chart-container">
-                  <CoinSparkline change7d={asset.change7d} />
+                  <CoinSparkline prices={asset.sparkline} change7d={asset.change7d} />
                 </td>
               </tr>
             ))}

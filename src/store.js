@@ -4,7 +4,7 @@ export const fetchCryptoData = createAsyncThunk(
   'crypto/fetchCryptoData',
   async () => {
     const response = await fetch(
-      'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin,ethereum,tether,binancecoin,ripple&order=market_cap_desc&per_page=5&page=1&sparkline=false&price_change_percentage=24h,7d'
+      'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin,ethereum,tether,binancecoin,ripple&order=market_cap_desc&per_page=5&page=1&sparkline=true&price_change_percentage=24h,7d'
     );
     const data = await response.json();
     return data;
@@ -46,7 +46,8 @@ const cryptoSlice = createSlice({
           marketCap: coin.market_cap,
           volume24h: coin.total_volume,
           circulatingSupply: coin.circulating_supply,
-          maxSupply: coin.max_supply
+          maxSupply: coin.max_supply,
+          sparkline: coin.sparkline_in_7d?.price ?? []
         }));
       })
       .addCase(fetchCryptoData.rejected, (state, action) => {
